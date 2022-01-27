@@ -23,9 +23,27 @@ class BountyViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+//        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? ListCell else {
+//            return UITableViewCell()
+//        }
         
-        return cell
+//        let img = UIImage(named: "\(nameList[indexPath.row]).jpg")
+//        cell.imgView.image = img
+//        cell.nameLabel.text = nameList[indexPath.row]
+//        cell.bountyLabel.text = "\(bountyList[indexPath.row])"
+//
+//        return cell
+        
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? ListCell {
+            let img = UIImage(named: "\(nameList[indexPath.row]).jpg")
+            cell.imgView.image = img
+            cell.nameLabel.text = nameList[indexPath.row]
+            cell.bountyLabel.text = "\(bountyList[indexPath.row])"
+            
+            return cell
+        } else {
+            return UITableViewCell()
+        }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
