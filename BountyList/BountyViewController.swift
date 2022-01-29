@@ -48,6 +48,7 @@ class BountyViewController: UIViewController, UITableViewDataSource, UITableView
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(indexPath)
+        performSegue(withIdentifier: "showDetail", sender: nil)
     }
 }
 
