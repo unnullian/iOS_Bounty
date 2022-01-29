@@ -14,6 +14,9 @@
 		B834EEB627A175D200F4F397 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B834EEB427A175D200F4F397 /* LaunchScreen.storyboard */; };
 		B834EEBE27A1768600F4F397 /* BountyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B834EEBD27A1768600F4F397 /* BountyViewController.swift */; };
 		B8EE829F27A563D300106C15 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EE829E27A563D300106C15 /* DetailViewController.swift */; };
+		B8EE82A127A59B8300106C15 /* BountyInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EE82A027A59B8300106C15 /* BountyInfo.swift */; };
+		B8EE82A327A59BD700106C15 /* BountyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EE82A227A59BD700106C15 /* BountyViewModel.swift */; };
+		B8EE82A527A59C0300106C15 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EE82A427A59C0300106C15 /* DetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		B834EEB727A175D200F4F397 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B834EEBD27A1768600F4F397 /* BountyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BountyViewController.swift; sourceTree = "<group>"; };
 		B8EE829E27A563D300106C15 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		B8EE82A027A59B8300106C15 /* BountyInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BountyInfo.swift; sourceTree = "<group>"; };
+		B8EE82A227A59BD700106C15 /* BountyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BountyViewModel.swift; sourceTree = "<group>"; };
+		B8EE82A427A59C0300106C15 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +66,11 @@
 			children = (
 				B834EEA927A175D000F4F397 /* AppDelegate.swift */,
 				B834EEAB27A175D000F4F397 /* SceneDelegate.swift */,
+				B8EE82A027A59B8300106C15 /* BountyInfo.swift */,
 				B834EEBD27A1768600F4F397 /* BountyViewController.swift */,
+				B8EE82A227A59BD700106C15 /* BountyViewModel.swift */,
 				B8EE829E27A563D300106C15 /* DetailViewController.swift */,
+				B8EE82A427A59C0300106C15 /* DetailViewModel.swift */,
 				B834EEAF27A175D000F4F397 /* Main.storyboard */,
 				B834EEB227A175D200F4F397 /* Assets.xcassets */,
 				B834EEB427A175D200F4F397 /* LaunchScreen.storyboard */,
@@ -141,8 +150,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8EE82A127A59B8300106C15 /* BountyInfo.swift in Sources */,
 				B834EEAA27A175D000F4F397 /* AppDelegate.swift in Sources */,
+				B8EE82A527A59C0300106C15 /* DetailViewModel.swift in Sources */,
 				B834EEBE27A1768600F4F397 /* BountyViewController.swift in Sources */,
+				B8EE82A327A59BD700106C15 /* BountyViewModel.swift in Sources */,
 				B834EEAC27A175D000F4F397 /* SceneDelegate.swift in Sources */,
 				B8EE829F27A563D300106C15 /* DetailViewController.swift in Sources */,
 			);

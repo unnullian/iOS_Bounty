@@ -12,13 +12,11 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var lblBounty: UILabel!
     @IBOutlet weak var lblName: UILabel!
     
-    var name: String? = ""
-    var bounty: String? = ""
+    let viewModel = DetailViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
-        // Do any additional setup after loading the view.ㄴ
     }
     
     @IBAction func showDetail(_ sender: Any) {
@@ -26,24 +24,13 @@ class DetailViewController: UIViewController {
     }
     
     private func updateUI() {
-        if let name = self.name, let bounty = self.bounty {
+        if let name = viewModel.bountyInfo?.name, let bounty = viewModel.bountyInfo?.bounty {
             let img = UIImage(named: "\(name).jpg")
             imgView.image = img
-            lblBounty.text = bounty
+            lblBounty.text = String(bounty)
             lblName.text = name
         } else {
             
         }
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

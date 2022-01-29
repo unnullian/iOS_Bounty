@@ -8,49 +8,35 @@
 import UIKit
 
 class BountyViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    
-    let nameList = ["brook", "chopper", "franky", "luffy", "nami", "robin", "sanji", "zoro"]
-    let bountyList = [33_000_000, 50, 44_000_000, 300_000_000, 16_000_000, 80_000_000, 120_000_000]
 
+    let viewModel = BountyViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // DetailViewController 데이터 줄꺼에요
         if segue.identifier == "showDetail" {
             let vc = segue.destination as? DetailViewController
             
             if let index = sender as? Int {
-                vc?.name = nameList[index]
-                vc?.bounty = String(bountyList[index])
+                
+                let bountyInfo = viewModel.bountyInfo(at: index)
+                vc?.viewModel.update(model: bountyInfo)
             }
         }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return bountyList.count
+        return viewModel.numOfBountyInfoList
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? ListCell else {
-//            return UITableViewCell()
-//        }
-        
-//        let img = UIImage(named: "\(nameList[indexPath.row]).jpg")
-//        cell.imgView.image = img
-//        cell.nameLabel.text = nameList[indexPath.row]
-//        cell.bountyLabel.text = "\(bountyList[indexPath.row])"
-//
-//        return cell
         
         if let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? ListCell {
-            let img = UIImage(named: "\(nameList[indexPath.row]).jpg")
-            cell.imgView.image = img
-            cell.nameLabel.text = nameList[indexPath.row]
-            cell.bountyLabel.text = "\(bountyList[indexPath.row])"
+            let index = indexPath.row
+            let bountyInfo = viewModel.bountyInfo(at: index)
+            cell.update(model: bountyInfo)
             
             return cell
         } else {
@@ -67,4 +53,11 @@ class ListCell: UITableViewCell {
     @IBOutlet weak var imgView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var bountyLabel: UILabel!
+    
+    func update(model: BountyInfo) {
+        let img = model.image
+        imgView.image = img
+        nameLabel.text = model.name
+        bountyLabel.text = "\(model.bounty)"
+    }
 }
