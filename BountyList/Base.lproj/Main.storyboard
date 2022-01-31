@@ -120,13 +120,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="lbl_name" text="Luffy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ylA-nR-Jsw">
-                                <rect key="frame" x="20" y="610" width="374" height="48"/>
+                                <rect key="frame" x="163" y="610" width="88" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="lbl_bounty" text="300,000,000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CKe-1C-nTD">
-                                <rect key="frame" x="20" y="697" width="374" height="36"/>
+                                <rect key="frame" x="117.5" y="697" width="179.5" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -141,21 +141,21 @@
                             <constraint firstItem="uJF-Op-dKe" firstAttribute="leading" secondItem="MN9-xQ-iry" secondAttribute="leading" constant="20" id="1Il-uS-WCH"/>
                             <constraint firstItem="CKe-1C-nTD" firstAttribute="top" secondItem="ylA-nR-Jsw" secondAttribute="bottom" constant="39" id="BIB-PT-1tl"/>
                             <constraint firstItem="MN9-xQ-iry" firstAttribute="trailing" secondItem="36L-OB-ZgA" secondAttribute="trailing" constant="50" id="H0P-Mq-dlv"/>
-                            <constraint firstItem="ylA-nR-Jsw" firstAttribute="leading" secondItem="MN9-xQ-iry" secondAttribute="leading" constant="20" id="I39-yw-gQv"/>
                             <constraint firstItem="MN9-xQ-iry" firstAttribute="top" secondItem="36L-OB-ZgA" secondAttribute="top" constant="10" id="NEu-7r-7YT"/>
-                            <constraint firstItem="MN9-xQ-iry" firstAttribute="trailing" secondItem="CKe-1C-nTD" secondAttribute="trailing" constant="20" id="SQa-qb-tVt"/>
-                            <constraint firstItem="MN9-xQ-iry" firstAttribute="trailing" secondItem="ylA-nR-Jsw" secondAttribute="trailing" constant="20" id="Vvy-65-0pi"/>
+                            <constraint firstItem="ylA-nR-Jsw" firstAttribute="centerX" secondItem="uJF-Op-dKe" secondAttribute="centerX" id="PMd-tF-z8Q"/>
                             <constraint firstItem="MN9-xQ-iry" firstAttribute="trailing" secondItem="uJF-Op-dKe" secondAttribute="trailing" constant="20" id="Wgy-kE-6zc"/>
                             <constraint firstItem="uJF-Op-dKe" firstAttribute="top" secondItem="MN9-xQ-iry" secondAttribute="top" constant="80" id="aVv-sU-wg6"/>
                             <constraint firstItem="ylA-nR-Jsw" firstAttribute="top" secondItem="uJF-Op-dKe" secondAttribute="bottom" constant="25" id="ghx-f0-djm"/>
                             <constraint firstItem="MN9-xQ-iry" firstAttribute="bottom" secondItem="uJF-Op-dKe" secondAttribute="bottom" constant="223" id="nTl-DR-GWX"/>
-                            <constraint firstItem="CKe-1C-nTD" firstAttribute="leading" secondItem="MN9-xQ-iry" secondAttribute="leading" constant="20" id="sMb-aV-k55"/>
+                            <constraint firstItem="CKe-1C-nTD" firstAttribute="centerX" secondItem="uJF-Op-dKe" secondAttribute="centerX" id="pkv-rj-Opg"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="imgView" destination="uJF-Op-dKe" id="5lk-4c-b21"/>
                         <outlet property="lblBounty" destination="CKe-1C-nTD" id="YHs-wF-8QJ"/>
+                        <outlet property="lblBountyCenterX" destination="pkv-rj-Opg" id="tCB-hg-6wC"/>
                         <outlet property="lblName" destination="ylA-nR-Jsw" id="9FV-sl-XF5"/>
+                        <outlet property="lblNameCenterX" destination="PMd-tF-z8Q" id="2Nx-O8-wjD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dAb-fB-dNa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
