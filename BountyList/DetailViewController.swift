@@ -28,19 +28,22 @@ class DetailViewController: UIViewController {
     }
     
     private func prepareAnimation() {
-        lblNameCenterX.constant = view.bounds.width
-        lblBountyCenterX.constant = view.bounds.width
+        lblName.transform = CGAffineTransform(translationX: view.bounds.width, y: 0).scaledBy(x: 3, y: 3).rotated(by: 180)
+        lblBounty.transform = CGAffineTransform(translationX: view.bounds.width, y: 0).scaledBy(x: 3, y: 3).rotated(by: 180)
+        lblName.alpha = 0
+        lblBounty.alpha = 0
     }
     
     private func showAnimation() {
-        lblNameCenterX.constant = 0
-        lblBountyCenterX.constant = 0
+        UIView.animate(withDuration: 1, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.2, options: .allowUserInteraction, animations: {
+            self.lblName.transform = CGAffineTransform.identity
+            self.lblName.alpha = 1
+        }, completion: nil)
         
-//        UIView.animate(withDuration: 0.1) {
-//            self.view.layoutIfNeeded()
-//        }
-        
-        UIView.animate(withDuration: 0.3, delay: 0.2, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.2, options: .allowUserInteraction, animations: self.view.layoutIfNeeded, completion: nil)
+        UIView.animate(withDuration: 1, delay: 0.2, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.2, options: .allowUserInteraction, animations: {
+            self.lblBounty.transform = CGAffineTransform.identity
+            self.lblBounty.alpha = 1
+        }, completion: nil)
         
         UIView.transition(with: imgView, duration: 0.3, options: .transitionFlipFromLeft, animations: nil, completion: nil)
     }
